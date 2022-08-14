@@ -1,7 +1,7 @@
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { axiosInstance } from "../../config";
 import "./sidebar.css";
 
 const Sidebar = () => {
@@ -9,7 +9,9 @@ const Sidebar = () => {
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axiosInstance.get("/categories");
+      const res = await axios.get(
+        "https://dev-theblog.herokuapp.com/api/categories"
+      );
       setCats(res.data);
     };
     getCats();

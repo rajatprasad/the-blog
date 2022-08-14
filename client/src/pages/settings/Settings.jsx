@@ -3,7 +3,6 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { Context } from "../../context/Context";
 import "./settings.css";
 import defaultPic from "../../images/default.jpeg";
-// import { axiosInstance } from "../../config";
 import axios from "axios";
 
 const Settings = () => {
