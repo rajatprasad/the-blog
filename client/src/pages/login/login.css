@@ -1,0 +1,130 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.loginLogo {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+  background-color: #ee5048;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.loginLogoText {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(45, 44, 44);
+  font-size: 60px;
+}
+
+.loginTitle {
+  font-size: 50px;
+}
+
+.loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+/* .loginForm > lable {
+  margin: 10px 0;
+} */
+
+.loginInput {
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  color: #656976;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 12px;
+}
+
+::placeholder {
+  color: #c2c3c7;
+}
+
+.loginInput:focus {
+  background: #ffffff;
+  border: 1px solid;
+  border-color: #5c89de;
+  outline: 2px;
+  outline-color: #5c89de26;
+}
+
+.loginButton {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #ee5048;
+  font-weight: 500;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.loginButton:hover {
+  background-color: #e14941;
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+  background-color: #ea746e;
+}
+
+/* .loginRegisterButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: teal;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+} */
+
+.loginText {
+  font-family: "Poppins", sans-serif;
+  margin: 20px;
+  line-height: 1.5;
+  color: rgb(101, 105, 118);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.loginRegisterButton {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #656976;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  background-color: #ffffff;
+
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.loginRegisterButton:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+}

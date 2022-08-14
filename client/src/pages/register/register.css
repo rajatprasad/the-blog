@@ -1,0 +1,111 @@
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.registerLogo {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+  background-color: #ee5048;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.registerLogoText {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(45, 44, 44);
+  font-size: 60px;
+}
+
+.registerTitle {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+/* .registerForm > lable {
+  margin: 10px 0;
+} */
+
+.registerInput {
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  color: #656976;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 12px;
+}
+
+::placeholder {
+  color: #c2c3c7;
+}
+
+.registerInput:focus {
+  background: #ffffff;
+  border: 1px solid;
+  border-color: #5c89de;
+  outline: 2px;
+  outline-color: #5c89de26;
+}
+
+.registerButton {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #ee5048;
+  font-weight: 500;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.registerButton:hover {
+  background-color: #e14941;
+}
+
+.registerLoginButton {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #656976;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  background-color: #ffffff;
+
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.registerLoginButton:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.1);
+}
+
+.registerError {
+  color: red;
+  margin-top: 10px;
+}
