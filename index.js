@@ -24,7 +24,7 @@ const connect = async () => {
   }
 };
 
-// connect();
+connect();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -60,6 +60,6 @@ app.get("*", (req, res) => {
 //   });
 // } else {
 app.listen(port, () => {
-  connect();
+  // connect();
   console.log("Backend is runing.");
 });

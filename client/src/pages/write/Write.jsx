@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { useState } from "react";
 import { Context } from "../../context/Context";
+import axios from "axios";
 import "./write.css";
-import { axiosInstance } from "../../config";
 
 const Write = () => {
   const [title, setTitle] = useState("");
@@ -24,13 +24,16 @@ const Write = () => {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axiosInstance.post("/upload", data);
+        await axios.post("https://dev-theblog.herokuapp.com/api/upload", data);
       } catch (err) {
         console.log(err);
       }
     }
     try {
-      const res = await axiosInstance.post("/posts", newPost);
+      const res = await axios.post(
+        "https://dev-theblog.herokuapp.com/api/posts",
+        newPost
+      );
       window.location.replace("/post/" + res.data._id);
     } catch (err) {
       console.log(err);

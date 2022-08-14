@@ -1,6 +1,7 @@
+import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { axiosInstance } from "../../config";
+// import { axiosInstance } from "../../config";
 import { Context } from "../../context/Context";
 import "./singlePost.css";
 
@@ -16,7 +17,9 @@ const SinglePost = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axiosInstance.get("/posts/" + path);
+      const res = await axios.get(
+        "https://dev-theblog.herokuapp.com/api/posts/" + path
+      );
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -26,9 +29,12 @@ const SinglePost = () => {
 
   const handleDelete = async () => {
     try {
-      await axiosInstance.delete(`/posts/${path}`, {
-        data: { username: user.username },
-      });
+      await axios.delete(
+        `https://dev-theblog.herokuapp.com/api/posts/${path}`,
+        {
+          data: { username: user.username },
+        }
+      );
       window.location.replace("/");
     } catch (err) {
       console.log(err);
@@ -37,11 +43,14 @@ const SinglePost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axiosInstance.put(`/posts/${post._id}`, {
-        username: user.username,
-        title: title,
-        desc: desc,
-      });
+      await axios.put(
+        `https://dev-theblog.herokuapp.com/api/posts/${post._id}`,
+        {
+          username: user.username,
+          title: title,
+          desc: desc,
+        }
+      );
       setUpdateMode(false);
     } catch (err) {
       console.log(err);

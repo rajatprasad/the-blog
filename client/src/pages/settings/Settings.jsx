@@ -3,7 +3,8 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { Context } from "../../context/Context";
 import "./settings.css";
 import defaultPic from "../../images/default.jpeg";
-import { axiosInstance } from "../../config";
+// import { axiosInstance } from "../../config";
+import axios from "axios";
 
 const Settings = () => {
   const [file, setFile] = useState(null);
@@ -11,7 +12,7 @@ const Settings = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://dev-theblog.herokuapp.com/images/";
 
   const { user, dispatch } = useContext(Context);
 
@@ -31,13 +32,16 @@ const Settings = () => {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axiosInstance.post("/upload", data);
+        await axios.post("https://dev-theblog.herokuapp.com/api/upload", data);
       } catch (err) {
         console.log(err);
       }
     }
     try {
-      const res = await axiosInstance.put("/users/" + user._id, updatedUser);
+      const res = await axios.put(
+        "https://dev-theblog.herokuapp.com/api/users/" + user._id,
+        updatedUser
+      );
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {
